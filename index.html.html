@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maestro Ocasio — Especialista en recuperación de pareja, liberación espiritual y limpieza energética personalizada. Orientación espiritual confidencial y profesional.">
+<meta name="keywords" content="maestro espiritual, recuperación de pareja, limpieza energética, protección espiritual, consulta espiritual, esotérico, orientación espiritual">
+<meta name="author" content="Maestro Ocasio">
+<meta property="og:title" content="Maestro Ocasio — Orientación Espiritual Profesional">
+<meta property="og:description" content="Recupera tu paz, tu amor y tu equilibrio espiritual. Consultas privadas y confidenciales.">
+<meta property="og:type" content="website">
+<title>Maestro Ocasio — Orientación Espiritual Profesional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --negro: #080608;
+    --negro-suave: #0f0c10;
+    --dorado: #c9a84c;
+    --dorado-claro: #e8c97a;
+    --dorado-oscuro: #8a6c2a;
+    --purpura: #2a0a3d;
+    --purpura-medio: #3d1060;
+    --purpura-claro: #5a1a8a;
+    --vino: #6b1a2a;
+    --vino-claro: #8b2a3d;
+    --crema: #f5eed8;
+    --blanco: #fff9f0;
+    --gris: #c8b89a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'EB Garamond', serif;
+    background: var(--negro);
+    color: var(--crema);
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ─── NOISE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--negro); }
+  ::-webkit-scrollbar-thumb { background: var(--dorado-oscuro); border-radius: 3px; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(8,6,8,0.95) 0%, transparent 100%);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    transition: all 0.4s ease;
+  }
+
+  nav.scrolled {
+    background: rgba(8,6,8,0.97);
+    border-bottom-color: rgba(201,168,76,0.3);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    color: var(--dorado);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-logo span {
+    display: block;
+    font-family: 'EB Garamond', serif;
+    font-size: 0.65rem;
+    color: var(--gris);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0; right: 0;
+    height: 1px;
+    background: var(--dorado);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--dorado); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  .nav-cta {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--negro);
+    background: var(--dorado);
+    padding: 0.6rem 1.4rem;
+    text-decoration: none;
+    border-radius: 0;
+    transition: all 0.3s;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+
+  .nav-cta:hover {
+    background: var(--dorado-claro);
+    transform: translateY(-1px);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--dorado);
+    transition: all 0.3s;
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--negro);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(90,26,138,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(107,26,42,0.2) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 50% at 80% 70%, rgba(42,10,61,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse 100% 100% at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 50%);
+  }
+
+  /* Animated mist layers */
+  .mist {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .mist::before, .mist::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: drift 12s ease-in-out infinite alternate;
+  }
+
+  .mist::before {
+    width: 600px; height: 400px;
+    top: -100px; left: -100px;
+    background: rgba(90,26,138,0.12);
+  }
+
+  .mist::after {
+    width: 500px; height: 300px;
+    bottom: -50px; right: -50px;
+    background: rgba(107,26,42,0.1);
+    animation-delay: -6s;
+    animation-duration: 15s;
+  }
+
+  @keyframes drift {
+    from { transform: translate(0,0) scale(1); }
+    to { transform: translate(40px, 30px) scale(1.1); }
+  }
+
+  /* Stars */
+  .stars {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px; height: 2px;
+    background: var(--dorado);
+    border-radius: 50%;
+    animation: twinkle var(--d) ease-in-out infinite alternate;
+    opacity: 0;
+  }
+
+  @keyframes twinkle {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: var(--op); transform: scale(1.5); }
+  }
+
+  /* Mandala decoration */
+  .mandala {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(700px, 90vw);
+    height: min(700px, 90vw);
+    opacity: 0.04;
+    animation: rotateSlow 60s linear infinite;
+  }
+
+  @keyframes rotateSlow {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 900px;
+    padding: 6rem 2rem 4rem;
+    animation: heroReveal 1.5s ease forwards;
+  }
+
+  @keyframes heroReveal {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--dorado);
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    animation: heroReveal 1.5s ease 0.2s both;
+  }
+
+  .hero-badge::before, .hero-badge::after {
+    content: '✦';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--dorado);
+    font-size: 0.5rem;
+  }
+
+  .hero-badge::before { left: -10px; }
+  .hero-badge::after { right: -10px; }
+
+  h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--blanco);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 60px rgba(201,168,76,0.3);
+    animation: heroReveal 1.5s ease 0.4s both;
+  }
+
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--dorado-claro), var(--dorado), var(--dorado-oscuro));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--gris);
+    max-width: 650px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+    font-style: italic;
+    animation: heroReveal 1.5s ease 0.6s both;
+  }
+
+  .hero-subtitle strong {
+    color: var(--dorado);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .hero-divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+    margin: 0 auto 3rem;
+    animation: heroReveal 1.5s ease 0.5s both;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: heroReveal 1.5s ease 0.8s both;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--negro);
+    background: linear-gradient(135deg, var(--dorado-claro), var(--dorado));
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .btn-primary:hover::before { opacity: 1; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(201,168,76,0.4); }
+  .btn-primary span { position: relative; z-index: 1; }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dorado);
+    background: transparent;
+    border: 1px solid rgba(201,168,76,0.5);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    transition: all 0.4s;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(201,168,76,0.1);
+    border-color: var(--dorado);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(201,168,76,0.15);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(201,168,76,0.4);
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    animation: heroReveal 2s ease 1.2s both;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(180deg, rgba(201,168,76,0.4), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 6rem 2rem; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--dorado);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    color: var(--blanco);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  h2 em {
+    font-style: normal;
+    color: var(--dorado);
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--gris);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.9;
+    font-style: italic;
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    color: rgba(201,168,76,0.4);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+  }
+
+  .ornament-line {
+    flex: 1;
+    max-width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4));
+  }
+
+  .ornament-line.right {
+    background: linear-gradient(90deg, rgba(201,168,76,0.4), transparent);
+  }
+
+  /* ─── SERVICES ─── */
+  #servicios {
+    background: linear-gradient(180deg, var(--negro) 0%, var(--negro-suave) 50%, var(--negro) 100%);
+    position: relative;
+  }
+
+  #servicios::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dorado-oscuro), transparent);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(42,10,61,0.3) 0%, rgba(8,6,8,0.8) 100%);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 2.5rem;
+    transition: all 0.5s;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: linear-gradient(180deg, var(--dorado), var(--vino));
+    transition: height 0.5s ease;
+  }
+
+  .service-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .service-card:hover {
+    border-color: rgba(201,168,76,0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(201,168,76,0.08);
+  }
+
+  .service-card:hover::before { height: 100%; }
+  .service-card:hover::after { opacity: 1; }
+
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(201,168,76,0.4));
+    transition: transform 0.4s, filter 0.4s;
+  }
+
+  .service-card:hover .service-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(201,168,76,0.6));
+  }
+
+  .service-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dorado);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    color: var(--gris);
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+  }
+
+  .btn-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dorado);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    padding-bottom: 2px;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-card::after {
+    content: '→';
+    transition: transform 0.3s;
+  }
+
+  .btn-card:hover {
+    color: var(--dorado-claro);
+    border-bottom-color: var(--dorado);
+  }
+
+  .btn-card:hover::after { transform: translateX(4px); }
+
+  /* ─── ABOUT ─── */
+  #sobre {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-frame {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, var(--purpura) 0%, var(--negro) 100%);
+    border: 1px solid rgba(201,168,76,0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-frame::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.3), transparent 50%, rgba(107,26,42,0.3));
+    pointer-events: none;
+  }
+
+  .about-symbol {
+    font-size: 12rem;
+    opacity: 0.15;
+    filter: blur(2px);
+    animation: symbolFloat 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes symbolFloat {
+    from { transform: translateY(-10px) rotate(-5deg); }
+    to { transform: translateY(10px) rotate(5deg); }
+  }
+
+  .about-overlay-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .about-name-display {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    color: var(--dorado);
+    text-shadow: 0 0 30px rgba(201,168,76,0.5);
+    margin-bottom: 0.5rem;
+  }
+
+  .about-title-display {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gris);
+  }
+
+  .about-corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-color: var(--dorado);
+    border-style: solid;
+    opacity: 0.4;
+  }
+
+  .about-corner.tl { top: 15px; left: 15px; border-width: 1px 0 0 1px; }
+  .about-corner.tr { top: 15px; right: 15px; border-width: 1px 1px 0 0; }
+  .about-corner.bl { bottom: 15px; left: 15px; border-width: 0 0 1px 1px; }
+  .about-corner.br { bottom: 15px; right: 15px; border-width: 0 1px 1px 0; }
+
+  .about-accent {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 160px; height: 160px;
+    background: radial-gradient(ellipse, rgba(107,26,42,0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(20px);
+  }
+
+  .about-text { position: relative; z-index: 2; }
+
+  .about-text h2 { margin-bottom: 1.5rem; }
+
+  .about-text p {
+    font-size: 1.1rem;
+    color: var(--gris);
+    line-height: 2;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text p strong { color: var(--crema); font-weight: 600; }
+
+  .about-qualities {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 2rem 0;
+  }
+
+  .quality {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: var(--crema);
+    letter-spacing: 0.05em;
+  }
+
+  .quality::before {
+    content: '✦';
+    color: var(--dorado);
+    font-size: 0.6rem;
+    flex-shrink: 0;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  #testimonios {
+    background: linear-gradient(180deg, var(--negro-suave) 0%, var(--negro) 100%);
+    position: relative;
+  }
+
+  .testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .testimonio {
+    background: linear-gradient(135deg, rgba(42,10,61,0.2) 0%, rgba(15,12,16,0.9) 100%);
+    border: 1px solid rgba(201,168,76,0.1);
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.4s;
+  }
+
+  .testimonio:hover {
+    border-color: rgba(201,168,76,0.25);
+    transform: translateY(-4px);
+  }
+
+  .testimonio::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: 2rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 5rem;
+    color: var(--dorado);
+    opacity: 0.15;
+    line-height: 1;
+  }
+
+  .stars-rating {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--dorado);
+    font-size: 0.8rem;
+  }
+
+  .testimonio p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--gris);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonio-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .author-avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purpura-medio), var(--vino));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    color: var(--dorado);
+    border: 1px solid rgba(201,168,76,0.2);
+    flex-shrink: 0;
+  }
+
+  .author-info strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--crema);
+  }
+
+  .author-info span {
+    font-size: 0.8rem;
+    color: rgba(201,168,76,0.5);
+  }
+
+  /* ─── HOW IT WORKS ─── */
+  #proceso {
+    position: relative;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+  }
+
+  .steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dorado-oscuro), var(--dorado-oscuro), transparent);
+    z-index: 0;
+  }
+
+  .step {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .step-num {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: var(--negro);
+    border: 1px solid rgba(201,168,76,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    color: var(--dorado);
+    position: relative;
+    transition: all 0.4s;
+  }
+
+  .step:hover .step-num {
+    background: rgba(201,168,76,0.1);
+    border-color: var(--dorado);
+    box-shadow: 0 0 20px rgba(201,168,76,0.2);
+  }
+
+  .step h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--dorado);
+    margin-bottom: 0.8rem;
+  }
+
+  .step p {
+    font-size: 0.95rem;
+    color: var(--gris);
+    line-height: 1.7;
+  }
+
+  /* ─── FAQ ─── */
+  #faq {
+    background: var(--negro-suave);
+    position: relative;
+  }
+
+  .faq-list {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .faq-item {
+    border: 1px solid rgba(201,168,76,0.1);
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .faq-item.open {
+    border-color: rgba(201,168,76,0.25);
+  }
+
+  .faq-q {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--crema);
+    background: rgba(42,10,61,0.1);
+    transition: background 0.3s, color 0.3s;
+    user-select: none;
+  }
+
+  .faq-q:hover, .faq-item.open .faq-q {
+    background: rgba(42,10,61,0.3);
+    color: var(--dorado);
+  }
+
+  .faq-icon {
+    width: 24px; height: 24px;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--dorado);
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s;
+    padding: 0 2rem;
+    font-size: 1rem;
+    color: var(--gris);
+    line-height: 1.9;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding: 1.5rem 2rem;
+  }
+
+  /* ─── CTA FINAL ─── */
+  #cta-final {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 50%, rgba(90,26,138,0.2) 0%, transparent 70%),
+      linear-gradient(180deg, var(--negro) 0%, var(--purpura) 50%, var(--negro) 100%);
+  }
+
+  #cta-final::before, #cta-final::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+  }
+
+  #cta-final::before { top: 0; }
+  #cta-final::after { bottom: 0; }
+
+  .cta-symbol {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(201,168,76,0.4));
+    animation: symbolFloat 6s ease-in-out infinite alternate;
+  }
+
+  .cta-final-text {
+    font-size: 1.15rem;
+    color: var(--gris);
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    line-height: 1.9;
+    font-style: italic;
+  }
+
+  .btn-mega {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--negro);
+    background: linear-gradient(135deg, var(--dorado-claro), var(--dorado), var(--dorado-oscuro));
+    padding: 1.3rem 3.5rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+    clip-path: polygon(15px 0%, 100% 0%, calc(100% - 15px) 100%, 0% 100%);
+    box-shadow: 0 10px 40px rgba(201,168,76,0.35);
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 10px 40px rgba(201,168,76,0.35); }
+    50% { box-shadow: 0 10px 60px rgba(201,168,76,0.55); }
+  }
+
+  .btn-mega:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(201,168,76,0.5);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--negro);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5rem;
+    color: var(--dorado);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.85rem;
+    color: rgba(201,168,76,0.4);
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .footer-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--dorado); }
+
+  .footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .footer-item .icon {
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 6px rgba(201,168,76,0.3));
+  }
+
+  .footer-item strong {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--dorado);
+  }
+
+  .footer-item span {
+    font-size: 0.85rem;
+    color: var(--gris);
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(201,168,76,0.2);
+    font-style: italic;
+  }
+
+  /* ─── FLOATING WHATSAPP ─── */
+  .wa-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+  }
+
+  .wa-tooltip {
+    background: rgba(8,6,8,0.95);
+    border: 1px solid rgba(201,168,76,0.2);
+    color: var(--crema);
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    white-space: nowrap;
+    animation: fadeInTooltip 1s ease 2s both;
+    backdrop-filter: blur(10px);
+  }
+
+  @keyframes fadeInTooltip {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .wa-btn {
+    width: 62px; height: 62px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    box-shadow: 0 6px 25px rgba(37,211,102,0.4);
+    transition: all 0.3s;
+    animation: waBounce 3s ease-in-out infinite;
+    position: relative;
+  }
+
+  .wa-btn::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid rgba(37,211,102,0.3);
+    animation: waPing 2s ease-in-out infinite;
+  }
+
+  @keyframes waPing {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0; }
+  }
+
+  @keyframes waBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .wa-btn:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 40px rgba(37,211,102,0.5);
+  }
+
+  /* ─── REVEAL ANIMATIONS ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-delay-6 { transition-delay: 0.6s; }
+
+  /* ─── MOBILE MENU ─── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(8,6,8,0.98);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    backdrop-filter: blur(20px);
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .mobile-menu a:hover { color: var(--dorado); }
+
+  .mobile-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: var(--dorado);
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: serif;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .about-frame { aspect-ratio: 16/9; max-height: 320px; }
+    .steps-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .steps-grid::before { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 4rem 1.5rem; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .footer-info { gap: 2rem; }
+    .wa-float { bottom: 1.5rem; right: 1.5rem; }
+    .wa-tooltip { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    Maestro Ocasio
+    <span>✦ Guía Espiritual ✦</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#sobre">El Maestro</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#faq">Preguntas</a></li>
+  </ul>
+  <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="nav-cta">Consultar ahora</a>
+  <div class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close" aria-label="Cerrar">✕</button>
+  <a href="#servicios" onclick="closeMobile()">Servicios</a>
+  <a href="#sobre" onclick="closeMobile()">El Maestro</a>
+  <a href="#testimonios" onclick="closeMobile()">Testimonios</a>
+  <a href="#proceso" onclick="closeMobile()">Proceso</a>
+  <a href="#faq" onclick="closeMobile()">Preguntas</a>
+  <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" style="color:var(--dorado);">Consultar por WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="mist"></div>
+  <div class="stars" id="stars"></div>
+
+  <!-- Mandala SVG -->
+  <svg class="mandala" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="195" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+    <circle cx="200" cy="200" r="160" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+    <circle cx="200" cy="200" r="120" stroke="currentColor" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="80" stroke="currentColor" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="40" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="5" y1="200" x2="395" y2="200" stroke="currentColor" stroke-width="0.3"/>
+    <line x1="200" y1="5" x2="200" y2="395" stroke="currentColor" stroke-width="0.3"/>
+    <line x1="55" y1="55" x2="345" y2="345" stroke="currentColor" stroke-width="0.3"/>
+    <line x1="345" y1="55" x2="55" y2="345" stroke="currentColor" stroke-width="0.3"/>
+    <polygon points="200,20 380,310 20,310" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.6"/>
+    <polygon points="200,380 20,90 380,90" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.6"/>
+    <polygon points="200,40 360,290 40,290" fill="none" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+    <polygon points="200,360 40,110 360,110" fill="none" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+    <circle cx="200" cy="200" r="8" fill="currentColor" opacity="0.6"/>
+    <g opacity="0.5">
+      <circle cx="200" cy="40" r="4" fill="currentColor"/>
+      <circle cx="200" cy="360" r="4" fill="currentColor"/>
+      <circle cx="40" cy="200" r="4" fill="currentColor"/>
+      <circle cx="360" cy="200" r="4" fill="currentColor"/>
+    </g>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-badge">✦ Orientación Espiritual Profesional ✦</div>
+    <h1>Recupera tu <em>paz</em>, tu amor y tu <em>equilibrio</em> espiritual</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">
+      <strong>Maestro Ocasio</strong> — Especialista en recuperación de pareja, liberación espiritual y limpieza energética personalizada.
+    </p>
+    <div class="btn-group">
+      <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-primary">
+        <span>💬</span>
+        <span>Consultar por WhatsApp</span>
+      </a>
+      <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-secondary">
+        <span>✨</span>
+        <span>Solicitar orientación</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Descubrir
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="servicios">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">✦ Lo que ofrezco ✦</span>
+      <h2>Servicios <em>Espirituales</em></h2>
+      <div class="ornament">
+        <div class="ornament-line"></div>
+        <span>✦</span>
+        <div class="ornament-line right"></div>
+      </div>
+      <p class="section-desc">Cada persona es única. Ofrezco soluciones personalizadas para cada situación espiritual y sentimental.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <span class="service-icon">💑</span>
+        <h3>Recuperación de Pareja</h3>
+        <p>Reconstrucción y armonización sentimental. Trabajo espiritual enfocado en restaurar vínculos y reencender el amor verdadero.</p>
+        <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-card">Consultar ahora</a>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-icon">🕊️</span>
+        <h3>Liberación Espiritual</h3>
+        <p>Orientación y acompañamiento espiritual para liberar ataduras del pasado y abrir nuevos caminos de vida y bienestar.</p>
+        <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-card">Consultar ahora</a>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <span class="service-icon">🌿</span>
+        <h3>Limpieza Energética</h3>
+        <p>Eliminación de cargas negativas que bloquean tu progreso. Restaura tu campo energético y recupera tu vitalidad natural.</p>
+        <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-card">Consultar ahora</a>
+      </div>
+
+      <div class="service-card reveal reveal-delay-4">
+        <span class="service-icon">🛡️</span>
+        <h3>Protección Espiritual</h3>
+        <p>Fortalecimiento energético para protegerte de influencias negativas y crear un escudo de luz a tu alrededor.</p>
+        <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-card">Consultar ahora</a>
+      </div>
+
+      <div class="service-card reveal reveal-delay-5">
+        <span class="service-icon">⚡</span>
+        <h3>Corte de Bloqueos</h3>
+        <p>Orientación para identificar y superar los obstáculos invisibles que impiden tu avance en el amor, trabajo y vida.</p>
+        <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-card">Consultar ahora</a>
+      </div>
+
+      <div class="service-card reveal reveal-delay-6">
+        <span class="service-icon">🔮</span>
+        <h3>Consulta Personalizada</h3>
+        <p>Atención privada y completamente confidencial. Un espacio seguro para hablar de lo que más te preocupa con total discreción.</p>
+        <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-card">Consultar ahora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="sobre" style="background: linear-gradient(180deg, var(--negro) 0%, var(--negro-suave) 100%);">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <div class="about-frame">
+          <div class="about-corner tl"></div>
+          <div class="about-corner tr"></div>
+          <div class="about-corner bl"></div>
+          <div class="about-corner br"></div>
+          <span class="about-symbol">⬡</span>
+          <div class="about-overlay-text">
+            <div class="about-name-display">Maestro Ocasio</div>
+            <div class="about-title-display">✦ Guía Espiritual ✦</div>
+          </div>
+        </div>
+        <div class="about-accent"></div>
+      </div>
+
+      <div class="about-text reveal reveal-delay-2">
+        <span class="section-label">✦ Sobre mí ✦</span>
+        <h2>Un camino de <em>luz</em> y sabiduría</h2>
+        <div class="ornament" style="justify-content:flex-start; margin-bottom:1.5rem;">
+          <div class="ornament-line" style="max-width:60px;"></div>
+          <span>✦</span>
+        </div>
+        <p>
+          <strong>Maestro Ocasio</strong> ofrece orientación espiritual personalizada, acompañando procesos sentimentales, energéticos y de crecimiento personal con atención privada y confidencial.
+        </p>
+        <p>
+          Con años de experiencia en el trabajo espiritual, cada consulta es tratada con el más alto nivel de respeto, discreción y compromiso. Mi misión es ser el puente entre tu situación actual y el bienestar que mereces.
+        </p>
+        <div class="about-qualities">
+          <div class="quality">Atención completamente confidencial y personalizada</div>
+          <div class="quality">Experiencia en procesos sentimentales y energéticos</div>
+          <div class="quality">Acompañamiento continuo durante el proceso</div>
+          <div class="quality">Resultados comprobados por cientos de consultantes</div>
+        </div>
+        <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-primary">
+          <span>💬</span>
+          <span>Hablar ahora</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonios">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">✦ Voces de transformación ✦</span>
+      <h2>Lo que dicen mis <em>consultantes</em></h2>
+      <div class="ornament">
+        <div class="ornament-line"></div>
+        <span>✦</span>
+        <div class="ornament-line right"></div>
+      </div>
+    </div>
+
+    <div class="testimonios-grid">
+      <div class="testimonio reveal reveal-delay-1">
+        <div class="stars-rating">★★★★★</div>
+        <p>Después de meses de sufrimiento, el Maestro Ocasio me ayudó a recuperar mi relación. Su trabajo es serio, discreto y realmente funciona. Mi pareja regresó en menos de tres semanas.</p>
+        <div class="testimonio-author">
+          <div class="author-avatar">M</div>
+          <div class="author-info">
+            <strong>María C.</strong>
+            <span>Bogotá, Colombia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio reveal reveal-delay-2">
+        <div class="stars-rating">★★★★★</div>
+        <p>Sentía una energía muy pesada en mi hogar y en mi trabajo. Tras la limpieza energética, todo cambió. Llegaron nuevas oportunidades y recuperé mi paz interior. Eternamente agradecido.</p>
+        <div class="testimonio-author">
+          <div class="author-avatar">J</div>
+          <div class="author-info">
+            <strong>Jorge A.</strong>
+            <span>Medellín, Colombia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio reveal reveal-delay-3">
+        <div class="stars-rating">★★★★★</div>
+        <p>Lo que más me sorprendió fue la discreción y el profesionalismo. El Maestro me escuchó sin juzgar y encontró exactamente lo que necesitaba para superar mis bloqueos. Altamente recomendado.</p>
+        <div class="testimonio-author">
+          <div class="author-avatar">L</div>
+          <div class="author-info">
+            <strong>Luisa P.</strong>
+            <span>Cali, Colombia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio reveal reveal-delay-4">
+        <div class="stars-rating">★★★★★</div>
+        <p>Llevaba años sintiendo que algo invisible me bloqueaba. Con el Maestro Ocasio encontré la claridad que buscaba. El proceso de liberación espiritual fue increíblemente transformador.</p>
+        <div class="testimonio-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <strong>Roberto V.</strong>
+            <span>Barranquilla, Colombia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio reveal reveal-delay-5">
+        <div class="stars-rating">★★★★★</div>
+        <p>No creía en estas cosas hasta que lo viví. Mi situación económica y sentimental cambió completamente. El Maestro Ocasio tiene un don especial y lo aplica con mucha responsabilidad.</p>
+        <div class="testimonio-author">
+          <div class="author-avatar">A</div>
+          <div class="author-info">
+            <strong>Andrea T.</strong>
+            <span>Bucaramanga, Colombia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio reveal reveal-delay-6">
+        <div class="stars-rating">★★★★★</div>
+        <p>La protección espiritual que recibí me ha dado una tranquilidad que no conocía. Ya no siento esa angustia constante. Recomiendo al Maestro Ocasio con los ojos cerrados a cualquier persona.</p>
+        <div class="testimonio-author">
+          <div class="author-avatar">C</div>
+          <div class="author-info">
+            <strong>Carolina M.</strong>
+            <span>Pereira, Colombia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="proceso" style="background: var(--negro);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">✦ El camino ✦</span>
+      <h2>¿Cómo <em>funciona</em>?</h2>
+      <div class="ornament">
+        <div class="ornament-line"></div>
+        <span>✦</span>
+        <div class="ornament-line right"></div>
+      </div>
+      <p class="section-desc">Un proceso sencillo, discreto y totalmente enfocado en tu bienestar.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">I</div>
+        <h3>Contacto por WhatsApp</h3>
+        <p>Escríbeme directamente al WhatsApp. Sin complicaciones, sin formularios. Solo tú y yo.</p>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-num">II</div>
+        <h3>Consulta Privada</h3>
+        <p>Conversamos de forma completamente confidencial sobre tu situación actual y lo que deseas lograr.</p>
+      </div>
+      <div class="step reveal reveal-delay-3">
+        <div class="step-num">III</div>
+        <h3>Evaluación Personalizada</h3>
+        <p>Realizo una evaluación espiritual de tu caso y diseño el proceso más adecuado para ti.</p>
+      </div>
+      <div class="step reveal reveal-delay-4">
+        <div class="step-num">IV</div>
+        <h3>Seguimiento Continuo</h3>
+        <p>Te acompaño durante todo el proceso, con reportes y comunicación constante hasta ver resultados.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:3.5rem;" class="reveal">
+      <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-primary">
+        <span>✨</span>
+        <span>Iniciar mi proceso ahora</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">✦ Dudas frecuentes ✦</span>
+      <h2>Preguntas <em>frecuentes</em></h2>
+      <div class="ornament">
+        <div class="ornament-line"></div>
+        <span>✦</span>
+        <div class="ornament-line right"></div>
+      </div>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          ¿Cómo funciona una consulta con el Maestro Ocasio?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          La consulta se realiza de manera directa y privada. Primero conversamos por WhatsApp para conocer tu situación. Luego evalúo espiritualmente tu caso y te presento el proceso más adecuado, con total claridad sobre los pasos a seguir y los resultados esperados.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          ¿Mis consultas son completamente confidenciales?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          Absolutamente. La discreción es uno de mis valores fundamentales. Todo lo que me compartes durante la consulta es estrictamente confidencial. No comparto ni divulgo información personal de ninguno de mis consultantes bajo ninguna circunstancia.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          ¿Cómo puedo agendar una consulta?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          Es muy sencillo. Solo debes hacer clic en cualquiera de los botones de WhatsApp en esta página. Te llevarán directamente a una conversación conmigo donde puedes escribirme con tu consulta o situación. Respondo lo más pronto posible.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          ¿Puedo recibir orientación desde cualquier lugar del mundo?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          Sí. El trabajo espiritual no tiene fronteras geográficas. Atiendo consultantes de Colombia, Latinoamérica, España, Estados Unidos y cualquier parte del mundo. Todo se realiza de manera remota con la misma efectividad.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          ¿Cuánto tiempo toma ver resultados?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          El tiempo varía según la complejidad de cada caso. Muchos consultantes comienzan a notar cambios en la primera o segunda semana. Te acompañaré durante todo el proceso y te mantendré informado del avance hasta lograr los resultados que buscas.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          ¿Qué tipo de situaciones puedo consultar?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">
+          Cualquier situación espiritual, sentimental o energética que te preocupe. Recuperación de pareja, problemas de familia, bloqueos en el trabajo o negocios, cargas energéticas, protección espiritual, o cualquier situación que sientas que necesita atención espiritual.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta-final">
+  <div class="container" style="max-width:700px;">
+    <span class="cta-symbol">✨</span>
+    <span class="section-label reveal">✦ Da el primer paso ✦</span>
+    <h2 class="reveal" style="margin-bottom:1.5rem;">Da el primer paso hacia tu <em>bienestar</em></h2>
+    <p class="cta-final-text reveal">
+      Recibe orientación personalizada y atención directa. Miles de personas ya han transformado su vida. Tu momento es ahora.
+    </p>
+    <div class="reveal">
+      <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="btn-mega">
+        💬 Escríbeme por WhatsApp
+      </a>
+    </div>
+    <p class="reveal" style="margin-top:2rem; font-size:0.85rem; color:rgba(201,168,76,0.4); font-style:italic;">Atención privada · Confidencialidad garantizada · Respuesta inmediata</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Maestro Ocasio</div>
+  <p class="footer-tagline">✦ Orientación Espiritual Profesional ✦</p>
+
+  <nav class="footer-links">
+    <a href="#servicios">Servicios</a>
+    <a href="#sobre">El Maestro</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <div class="footer-info">
+    <div class="footer-item">
+      <span class="icon">💬</span>
+      <strong>WhatsApp Directo</strong>
+      <span>
+        <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" style="color:var(--gris); text-decoration:none;">+57 321 357 5433</a>
+      </span>
+    </div>
+    <div class="footer-item">
+      <span class="icon">🔒</span>
+      <strong>Confidencialidad</strong>
+      <span>100% Garantizada</span>
+    </div>
+    <div class="footer-item">
+      <span class="icon">🌍</span>
+      <strong>Disponibilidad</strong>
+      <span>Internacional</span>
+    </div>
+  </div>
+
+  <p class="footer-copy">© 2025 Maestro Ocasio — Todos los derechos reservados · Orientación espiritual y esotérica</p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<div class="wa-float">
+  <div class="wa-tooltip">¿Necesitas ayuda? Escríbeme 🙏</div>
+  <a href="https://wa.me/573213575433?text=Hola%20Maestro%20Ocasio,%20quiero%20una%20consulta" target="_blank" rel="noopener" class="wa-btn" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+  // ── STARS ──
+  const starsContainer = document.getElementById('stars');
+  for (let i = 0; i < 80; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.cssText = `
+      left: ${Math.random() * 100}%;
+      top: ${Math.random() * 100}%;
+      --d: ${2 + Math.random() * 4}s;
+      --op: ${0.3 + Math.random() * 0.7};
+      animation-delay: ${Math.random() * 5}s;
+      width: ${1 + Math.random() * 2}px;
+      height: ${1 + Math.random() * 2}px;
+    `;
+    starsContainer.appendChild(star);
+  }
+
+  // ── NAVBAR SCROLL ──
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ── MOBILE MENU ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileClose = document.getElementById('mobile-close');
+
+  hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  // ── REVEAL ON SCROLL ──
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ── FAQ ──
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ── HIDE TOOLTIP AFTER 6s ──
+  setTimeout(() => {
+    const tooltip = document.querySelector('.wa-tooltip');
+    if (tooltip) {
+      tooltip.style.transition = 'opacity 1s';
+      tooltip.style.opacity = '0';
+      setTimeout(() => tooltip.style.display = 'none', 1000);
+    }
+  }, 6000);
+
+  // ── SMOOTH ANCHOR LINKS ──
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
